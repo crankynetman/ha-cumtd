@@ -2,8 +2,6 @@
 
 Never miss your CUMTD bus again! This integration tracks CUMTD bus arrivals and sends audio announcements to your speakers when it's time for you to leave.
 
-[![Add Integration](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=cumtd_bus)
-
 ## What This Does
 
 Creates sensors that track how many minutes until your next bus arrives at a defined stop/line/direction. Each sensor polls the CUMTD API every 15 seconds and shows arrival predictions for buses that are currently running.
@@ -69,11 +67,17 @@ Tells you when to head out the door. You set your walk time and a buffer, it doe
 
 ## Installation
 
-### One-Click Install
+### HACS (Recommended)
 
-[![Add Integration](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start?domain=cumtd_bus)
-
-Click the badge above to add the integration to your Home Assistant instance.
+1. Open HACS in your Home Assistant instance
+2. Click the three dots menu (⋮) in the top right corner
+3. Select **Custom repositories**
+4. Add this repository URL: `https://github.com/crankynetman/ha-cumtd`
+5. Select **Integration** as the category
+6. Click **Add**
+7. Search for "CUMTD Bus" in HACS and click **Download**
+8. Restart Home Assistant
+9. Add via Settings → Devices & Services → Add Integration → "CUMTD Bus"
 
 ### Manual Install
 
