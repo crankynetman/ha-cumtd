@@ -1,0 +1,142 @@
+blueprint:
+  name: CUMTD Bus Arrival Alert
+  description: >
+    Send a TTS announcement when your bus is approaching.
+    Triggers when the next bus is within your specified threshold.
+  domain: automation
+  source_url: https://github.com/crankynetman/ha-cumtd/blob/main/custom_components/cumtd_bus/blueprints/automation/bus_arrival_alert.yaml
+  input:
+    bus_sensor:
+      name: Bus Sensor
+      description: The CUMTD bus sensor to monitor (sensor.*_next_bus)
+      selector:
+        entity:
+          integration: cumtd_bus
+          domain: sensor
+
+    alert_threshold:
+      name: Alert When (minutes)
+      description: Send alert when bus is this many minutes away or less
+      default: 5
+      selector:
+        number:
+          min: 1
+          max: 30
+          mode: slider
+          unit_of_measurement: "min"
+
+    active_days:
+      name: Active Days
+      description: Which days should this alert be active?
+      default:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+      selector:
+        select:
+          multiple: true
+          options:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+            - sat
+            - sun
+
+    time_start:
+      name: Start Time
+      description: Only alert after this time
+      default: "07:00:00"
+      selector:
+        time:
+
+    time_end:
+      name: End Time
+      description: Only alert before this time
+      default: "09:00:00"
+      selector:
+        time:
+
+    tts_service:
+      name: TTS Service
+      description: Select your TTS service
+      selector:
+        target:
+          entity:
+            domain: tts
+
+    media_player:
+      name: Speaker(s)
+      description: Select one or more speakers for announcements
+      selector:
+        target:
+          entity:
+            domain: media_player
+
+    custom_name:
+      name: Your Name (optional)
+      description: Name to use in announcement (e.g., "Chris"). Leave empty for "Your bus"
+      default: ""
+      selector:
+        text:
+
+    message_template:
+      name: Message Template (optional)
+      description: >
+        Custom message template. Available variables:
+        {minutes}, {headsign}, {route}, {stop_name}, {name}.
+        Leave empty for default: "{name} bus is arriving in {minutes} minutes".
+      default: ""
+      selector:
+        text:
+          multiline: true
+
+mode: single
+max_exceeded: silent
+
+variables:
+  sensor_entity: !input bus_sensor
+  threshold: !input alert_threshold
+
+trigger:
+  - platform: numeric_state
+    entity_id: !input bus_sensor
+    below: !input alert_threshold
+  - platform: state
+    entity_id: !input bus_sensor
+
+condition:
+  - condition: template
+    value_template: >
+      {{ states(sensor_entity) not in ['unknown', 'unavailable']
+         and (states(sensor_entity) | int(999)) <= threshold }}
+  - condition: time
+    after: !input time_start
+    before: !input time_end
+    weekday: !input active_days
+
+action:
+  - variables:
+      minutes: "{{ states(sensor_entity) | int(0) }}"
+      headsign: "{{ state_attr(sensor_entity, 'headsign') or 'your bus' }}"
+      route: "{{ state_attr(sensor_entity, 'route') or '' }}"
+      stop_name: "{{ state_attr(sensor_entity, 'stop_name') or 'your stop' }}"
+      custom_name: !input custom_name
+      name: "{{ custom_name if custom_name else 'Your' }}"
+      custom_template: !input message_template
+      default_message: >
+        {{ name }}{% if name != 'Your' %}, your{% endif %}
+        {{ headsign }} bus is arriving in {{ minutes }} minute{% if minutes != 1 %}s{% endif %}
+        at {{ stop_name }}
+      message: "{{ custom_template if custom_template else default_message }}"
+      tts_target: !input tts_service
+      media_target: !input media_player
+
+  - service: tts.speak
+    data:
+      entity_id: "{{ tts_target.entity_id }}"
+      media_player_entity_id: "{{ media_target.entity_id }}"
+      message: "{{ message }}"

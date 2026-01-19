@@ -1,0 +1,14 @@
+services:
+  homeassistant:
+    image: homeassistant/home-assistant:latest
+    container_name: ha-cumtd-dev
+    restart: unless-stopped
+    ports:
+      - "8123:8123"
+    volumes:
+      - ./config:/config
+      - ./custom_components/cumtd_bus:/config/custom_components/cumtd_bus:ro
+    environment:
+      - TZ=America/Chicago
+    privileged: false
+    network_mode: host

@@ -1,0 +1,38 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+venv/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# MacOS
+.DS_Store
+
+# Development-only files, mostly related to compose.
+/config/
+/local/
+/.pytest_cache/
+/.ruff_cache/
+/.mypy_cache/
+
+# Home Assistant test config artifacts
+home-assistant.log*
+*.db
+*.db-shm
+*.db-wal

@@ -1,0 +1,141 @@
+blueprint:
+  name: CUMTD Time to Leave Alert
+  description: >
+    Remind you when it's time to leave based on bus arrival and walk time.
+    Alerts you walk_time + buffer_time minutes before the bus arrives.
+  domain: automation
+  source_url: https://github.com/crankynetman/ha-cumtd/blob/main/custom_components/cumtd_bus/blueprints/automation/time_to_leave_alert.yaml
+  input:
+    bus_sensor:
+      name: Bus Sensor
+      description: The CUMTD bus sensor to monitor (sensor.*_next_bus)
+      selector:
+        entity:
+          integration: cumtd_bus
+          domain: sensor
+
+    walk_time:
+      name: Walk Time to Stop
+      description: How long it takes you to walk to the bus stop
+      default: 5
+      selector:
+        number:
+          min: 1
+          max: 30
+          mode: slider
+          unit_of_measurement: "min"
+
+    buffer_time:
+      name: Buffer Time
+      description: Extra time cushion (you'll get alerted walk_time + buffer before bus)
+      default: 2
+      selector:
+        number:
+          min: 0
+          max: 10
+          mode: slider
+          unit_of_measurement: "min"
+
+    active_days:
+      name: Active Days
+      description: Which days should this alert be active?
+      default:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+      selector:
+        select:
+          multiple: true
+          options:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+            - sat
+            - sun
+
+    time_start:
+      name: Start Time
+      description: Only alert after this time
+      default: "07:00:00"
+      selector:
+        time:
+
+    time_end:
+      name: End Time
+      description: Only alert before this time
+      default: "09:00:00"
+      selector:
+        time:
+
+    tts_service:
+      name: TTS Service
+      description: Select your TTS service
+      selector:
+        target:
+          entity:
+            domain: tts
+
+    media_player:
+      name: Speaker(s)
+      description: Select one or more speakers for announcements
+      selector:
+        target:
+          entity:
+            domain: media_player
+
+    custom_name:
+      name: Your Name (optional)
+      description: Name to use in announcement (e.g., "Chris"). Leave empty for generic message
+      default: ""
+      selector:
+        text:
+
+mode: single
+max_exceeded: silent
+
+variables:
+  sensor_entity: !input bus_sensor
+  walk: !input walk_time
+  buffer: !input buffer_time
+  time_to_leave: "{{ walk + buffer }}"
+
+trigger:
+  - platform: template
+    value_template: >
+      {{ states(sensor_entity) | int(999) <= (walk + buffer) }}
+
+condition:
+  - condition: template
+    value_template: >
+      {% set bus_mins = states(sensor_entity) | int(999) %}
+      {% set leave_time = (walk + buffer) | int %}
+      {{ states(sensor_entity) not in ['unknown', 'unavailable']
+         and bus_mins <= leave_time
+         and bus_mins > 0 }}
+  - condition: time
+    after: !input time_start
+    before: !input time_end
+    weekday: !input active_days
+
+action:
+  - variables:
+      minutes: "{{ states(sensor_entity) | int(0) }}"
+      headsign: "{{ state_attr(sensor_entity, 'headsign') or 'your bus' }}"
+      route: "{{ state_attr(sensor_entity, 'route') or '' }}"
+      stop_name: "{{ state_attr(sensor_entity, 'stop_name') or 'your stop' }}"
+      custom_name: !input custom_name
+      name: "{{ custom_name if custom_name else '' }}"
+      tts_target: !input tts_service
+      media_target: !input media_player
+
+  - service: tts.speak
+    data:
+      entity_id: "{{ tts_target.entity_id }}"
+      media_player_entity_id: "{{ media_target.entity_id }}"
+      message: >
+        {% if name %}{{ name }}, t{% else %}T{% endif %}ime to leave!
+        Your {{ headsign }} bus arrives in {{ minutes }} minutes at {{ stop_name }}

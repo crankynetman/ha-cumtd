@@ -1,0 +1,81 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "CUMTD Bus",
+                "description": "Enter your CUMTD API key. You can add stops after setup.\n\nGet an API key at: https://developer.cumtd.com",
+                "data": {
+                    "api_key": "API Key"
+                }
+            }
+        },
+        "error": {
+            "invalid_api_key": "Invalid API key",
+            "invalid_auth": "Authentication failed",
+            "cannot_connect": "Unable to connect to CUMTD API",
+            "unknown": "An unexpected error occurred"
+        },
+        "abort": {
+            "already_configured": "This API key is already configured"
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "CUMTD Bus Configuration",
+                "description": "{description}",
+                "menu_options": {
+                    "edit_api_key": "Edit API Key",
+                    "add_stop": "Add New Stop",
+                    "manage_stops": "Edit/Remove Stops"
+                }
+            },
+            "manage_stops": {
+                "title": "Manage Stops",
+                "description": "Select a stop to manage",
+                "data": {
+                    "stop_index": "Stop"
+                }
+            },
+            "stop_action": {
+                "title": "Stop Action",
+                "description": "What would you like to do with {stop_name}?",
+                "data": {
+                    "action": "Action"
+                }
+            },
+            "edit_api_key": {
+                "title": "Edit API Key",
+                "description": "Current key: {current_key}",
+                "data": {
+                    "api_key": "New API Key"
+                }
+            },
+            "stop_search": {
+                "title": "Search for Bus Stop",
+                "description": "Search by stop name or street intersection (e.g., 'Illinois Terminal', 'Armory and Wright')",
+                "data": {
+                    "search_query": "Search",
+                    "stop_selection": "Select Stop"
+                }
+            },
+            "stop_configure": {
+                "title": "Configure Stop",
+                "description": "Stop: {stop_name}\n\nOptionally filter by route and/or direction. Leave blank for all routes.",
+                "data": {
+                    "route_id": "Route (optional)",
+                    "direction_filter": "Direction (optional)",
+                    "custom_name": "Custom Name (optional)"
+                }
+            }
+        },
+        "error": {
+            "invalid_api_key": "Invalid API key",
+            "invalid_auth": "Authentication failed",
+            "cannot_connect": "Unable to connect to CUMTD API",
+            "unknown": "An unexpected error occurred",
+            "empty_search": "Please enter a search term",
+            "no_stops_found": "No stops found. Try a different search."
+        }
+    }
+}

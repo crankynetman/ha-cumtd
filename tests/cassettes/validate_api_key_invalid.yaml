@@ -1,0 +1,142 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Host:
+      - developer.cumtd.com
+      User-Agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://developer.cumtd.com/api/v2.2/json/getstops
+  response:
+    body:
+      string: '{"time":"2026-01-19T12:32:07-06:00","new_changeset":true,"status":{"code":401,"msg":"invalid
+        key"},"rqst":{"params":{}}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Length:
+      - '120'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 19 Jan 2026 18:32:06 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 401
+      message: Unauthorized
+- request:
+    body: ''
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Host:
+      - developer.cumtd.com
+      User-Agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://developer.cumtd.com/api/v2.2/json/getstops
+  response:
+    body:
+      string: '{"time":"2026-01-19T12:34:22-06:00","new_changeset":true,"status":{"code":401,"msg":"invalid
+        key"},"rqst":{"params":{}}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Length:
+      - '120'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 19 Jan 2026 18:34:22 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 401
+      message: Unauthorized
+- request:
+    body: ''
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Host:
+      - developer.cumtd.com
+      User-Agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://developer.cumtd.com/api/v2.2/json/getstops
+  response:
+    body:
+      string: '{"time":"2026-01-19T12:36:11-06:00","new_changeset":true,"status":{"code":401,"msg":"invalid
+        key"},"rqst":{"params":{}}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Length:
+      - '120'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 19 Jan 2026 18:36:10 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 401
+      message: Unauthorized
+- request:
+    body: ''
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Host:
+      - developer.cumtd.com
+      User-Agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://developer.cumtd.com/api/v2.2/json/getstops
+  response:
+    body:
+      string: '{"time":"2026-01-19T12:37:31-06:00","new_changeset":true,"status":{"code":401,"msg":"invalid
+        key"},"rqst":{"params":{}}}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Length:
+      - '120'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 19 Jan 2026 18:37:30 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 401
+      message: Unauthorized
+version: 1

@@ -1,0 +1,250 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Host:
+      - developer.cumtd.com
+      User-Agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://developer.cumtd.com/api/v2.2/json/getdeparturesbystop?count=10&stop_id=IU
+  response:
+    body:
+      string: '{"time":"2026-01-19T12:32:08-06:00","new_changeset":true,"status":{"code":200,"msg":"ok"},"rqst":{"method":"GetDeparturesByStop","params":{"count":10,"route_id":"","stop_id":"IU"}},"departures":[{"stop_id":"IU:1","headsign":"5E
+        Green Hopper","route":{"route_color":"008063","route_id":"GREENHOPPER","route_long_name":"Green
+        Hopper","route_short_name":"5","route_text_color":"ffffff"},"trip":{"trip_id":"[@7.0.41101146@][3][1237931450218]\/3__GN8_MF","trip_headsign":"Washington
+        & Lierman","route_id":"GREENHOPPER","block_id":"GN8 MF","direction":"East","service_id":"GN8
+        MF","shape_id":"5E HOPPER 79"},"vehicle_id":"1347","origin":{"stop_id":"PKLN:1"},"destination":{"stop_id":"WASHLRMN:7"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:32:00-06:00","expected":"2026-01-19T12:32:31-06:00","expected_mins":0,"location":{"lat":40.110263,"lon":-88.2295}},{"stop_id":"IU:1","headsign":"13N
+        Silver","route":{"route_color":"cccccc","route_id":"SILVER","route_long_name":"Silver","route_short_name":"13","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.28932250@][1][1654525562862]\/38__SV2_UIMF","trip_headsign":"PAR","route_id":"SILVER","block_id":"SV2
+        UIMF","direction":"North","service_id":"SV2 UIMF","shape_id":"[@6.0.28932250@]1"},"vehicle_id":"1351","origin":{"stop_id":"PAR:2"},"destination":{"stop_id":"LSE:8"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:33:00-06:00","expected":"2026-01-19T12:33:21-06:00","expected_mins":1,"location":{"lat":40.103993,"lon":-88.23025}},{"stop_id":"IU:1","headsign":"12E
+        Teal PAR","route":{"route_color":"006991","route_id":"TEAL","route_long_name":"Teal","route_short_name":"12","route_text_color":"ffffff"},"trip":{"trip_id":"[@7.0.41893871@][3][1243541488843]\/119__T4_UIMF","trip_headsign":"PAR","route_id":"TEAL","block_id":"T4
+        UIMF","direction":"East","service_id":"T4 UIMF","shape_id":"TEAL 34"},"vehicle_id":"2044","origin":{"stop_id":"IT:5"},"destination":{"stop_id":"PAR:2"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:32:00-06:00","expected":"2026-01-19T12:34:32-06:00","expected_mins":2,"location":{"lat":40.114367,"lon":-88.228967}},{"stop_id":"IU:1","headsign":"8E
+        Bronze","route":{"route_color":"9e8966","route_id":"BRONZE","route_long_name":"Bronze","route_short_name":"8","route_text_color":"000000"},"trip":{"trip_id":"[@7.0.41201636@][3][1243611110703]\/3__BZ1_NOSCH_MF","trip_headsign":"Lincoln
+        Square","route_id":"BRONZE","block_id":"BZ1 NOSCH MF","direction":"East","service_id":"BZ1
+        NOSCH MF","shape_id":"8E"},"vehicle_id":"1609","origin":{"stop_id":"IU:1"},"destination":{"stop_id":"LSE:1"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:34:00-06:00","expected":"2026-01-19T12:35:41-06:00","expected_mins":4,"location":{"lat":40.103783,"lon":-88.233383}},{"stop_id":"IU:1","headsign":"2U
+        Red","route":{"route_color":"ed1c24","route_id":"RED","route_long_name":"Red","route_short_name":"2","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.66477024@][42][1748981149016]\/13__R1_MF","trip_headsign":"IT
+        - Urbana Meijer - Lincoln Square","route_id":"RED","block_id":"R1 MF","direction":"Urbana","service_id":"R1
+        MF","shape_id":"[@6.0.66477024@]38"},"vehicle_id":"2436","origin":{"stop_id":"WALMART:2"},"destination":{"stop_id":"LSE:1"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:38:00-06:00","expected":"2026-01-19T12:37:16-06:00","expected_mins":5,"location":{"lat":40.115317,"lon":-88.2419}},{"stop_id":"IU:2","headsign":"12W
+        Teal","route":{"route_color":"006991","route_id":"TEAL","route_long_name":"Teal","route_short_name":"12","route_text_color":"ffffff"},"trip":{"trip_id":"[@14.0.51708725@][4][1275506079140]\/11__T3_UIMF","trip_headsign":"Illinois
+        Terminal","route_id":"TEAL","block_id":"T3 UIMF","direction":"West","service_id":"T3
+        UIMF","shape_id":"TEAL 23"},"vehicle_id":"2432","origin":{"stop_id":"PAR:2"},"destination":{"stop_id":"IT:5"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:38:00-06:00","expected":"2026-01-19T12:38:00-06:00","expected_mins":6,"location":{"lat":40.100583,"lon":-88.2194}},{"stop_id":"IU:9","headsign":"22S
+        Illini","route":{"route_color":"5a1d5a","route_id":"ILLINI","route_long_name":"Illini","route_short_name":"22","route_text_color":"ffffff"},"trip":{"trip_id":"[@7.0.41200832@][2][1238430887312]\/167__I4_UIMF","trip_headsign":"PAR","route_id":"ILLINI","block_id":"I4
+        UIMF","direction":"South","service_id":"I4 UIMF","shape_id":"[@15.0.68513188@]4"},"vehicle_id":"2105","origin":{"stop_id":"LNCLNKLRNY:2"},"destination":{"stop_id":"PAR:2"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:39:00-06:00","expected":"2026-01-19T12:39:29-06:00","expected_mins":7,"location":{"lat":40.122717,"lon":-88.219517}},{"stop_id":"IU:9","headsign":"24S
+        Link","route":{"route_color":"00ffff","route_id":"LINK","route_long_name":"Link","route_short_name":"24","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.15252684@][2][1622672028480]\/70__LN3_MF","trip_headsign":"Water
+        Survey","route_id":"LINK","block_id":"LN3 MF","direction":"South","service_id":"LN3
+        MF","shape_id":"[@6.0.15252684@]2"},"vehicle_id":"2305","origin":{"stop_id":"UNIWRT:2"},"destination":{"stop_id":"ISWS:2"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:40:00-06:00","expected":"2026-01-19T12:41:44-06:00","expected_mins":10,"location":{"lat":40.112617,"lon":-88.228883}},{"stop_id":"IU:2","headsign":"5W
+        Green","route":{"route_color":"008063","route_id":"GREEN","route_long_name":"Green","route_short_name":"5","route_text_color":"ffffff"},"trip":{"trip_id":"2GN539__GN2_MF","trip_headsign":"Round
+        Barn Road - Holiday Park","route_id":"GREEN","block_id":"GN2 MF","direction":"West","service_id":"GN2
+        MF","shape_id":"5W-PM"},"vehicle_id":"2414","origin":{"stop_id":"MNBRDY:2"},"destination":{"stop_id":"WSFLDLWNDL:4"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:44:00-06:00","expected":"2026-01-19T12:42:03-06:00","expected_mins":10,"location":{"lat":40.10575,"lon":-88.204917}},{"stop_id":"IU:1","headsign":"12E
+        Teal Orchard Downs","route":{"route_color":"006991","route_id":"TEAL","route_long_name":"Teal","route_short_name":"12","route_text_color":"ffffff"},"trip":{"trip_id":"[@7.0.41893871@][3][1243541396687]\/86__T2_UIMF","trip_headsign":"Orchard
+        Downs","route_id":"TEAL","block_id":"T2 UIMF","direction":"East","service_id":"T2
+        UIMF","shape_id":"12E TEAL 13"},"vehicle_id":"2104","origin":{"stop_id":"IT:5"},"destination":{"stop_id":"ODSS:1"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:42:00-06:00","expected":"2026-01-19T12:42:08-06:00","expected_mins":10,"location":{"lat":40.114483,"lon":-88.233217}}]}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Length:
+      - '6869'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 19 Jan 2026 18:32:07 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Host:
+      - developer.cumtd.com
+      User-Agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://developer.cumtd.com/api/v2.2/json/getdeparturesbystop?count=10&stop_id=IU
+  response:
+    body:
+      string: '{"time":"2026-01-19T12:34:23-06:00","new_changeset":true,"status":{"code":200,"msg":"ok"},"rqst":{"method":"GetDeparturesByStop","params":{"count":10,"route_id":"","stop_id":"IU"}},"departures":[{"stop_id":"IU:1","headsign":"8E
+        Bronze","route":{"route_color":"9e8966","route_id":"BRONZE","route_long_name":"Bronze","route_short_name":"8","route_text_color":"000000"},"trip":{"trip_id":"[@7.0.41201636@][3][1243611110703]\/3__BZ1_NOSCH_MF","trip_headsign":"Lincoln
+        Square","route_id":"BRONZE","block_id":"BZ1 NOSCH MF","direction":"East","service_id":"BZ1
+        NOSCH MF","shape_id":"8E"},"vehicle_id":"1609","origin":{"stop_id":"IU:1"},"destination":{"stop_id":"LSE:1"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:34:00-06:00","expected":"2026-01-19T12:35:32-06:00","expected_mins":1,"location":{"lat":40.10545,"lon":-88.230533}},{"stop_id":"IU:9","headsign":"22S
+        Illini","route":{"route_color":"5a1d5a","route_id":"ILLINI","route_long_name":"Illini","route_short_name":"22","route_text_color":"ffffff"},"trip":{"trip_id":"[@7.0.41200832@][2][1238430887312]\/167__I4_UIMF","trip_headsign":"PAR","route_id":"ILLINI","block_id":"I4
+        UIMF","direction":"South","service_id":"I4 UIMF","shape_id":"[@15.0.68513188@]4"},"vehicle_id":"2105","origin":{"stop_id":"LNCLNKLRNY:2"},"destination":{"stop_id":"PAR:2"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:39:00-06:00","expected":"2026-01-19T12:39:29-06:00","expected_mins":5,"location":{"lat":40.116717,"lon":-88.21945}},{"stop_id":"IU:9","headsign":"24S
+        Link","route":{"route_color":"00ffff","route_id":"LINK","route_long_name":"Link","route_short_name":"24","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.15252684@][2][1622672028480]\/70__LN3_MF","trip_headsign":"Water
+        Survey","route_id":"LINK","block_id":"LN3 MF","direction":"South","service_id":"LN3
+        MF","shape_id":"[@6.0.15252684@]2"},"vehicle_id":"2305","origin":{"stop_id":"UNIWRT:2"},"destination":{"stop_id":"ISWS:2"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:40:00-06:00","expected":"2026-01-19T12:39:33-06:00","expected_mins":5,"location":{"lat":40.1164,"lon":-88.22}},{"stop_id":"IU:1","headsign":"2U
+        Red","route":{"route_color":"ed1c24","route_id":"RED","route_long_name":"Red","route_short_name":"2","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.66477024@][42][1748981149016]\/13__R1_MF","trip_headsign":"IT
+        - Urbana Meijer - Lincoln Square","route_id":"RED","block_id":"R1 MF","direction":"Urbana","service_id":"R1
+        MF","shape_id":"[@6.0.66477024@]38"},"vehicle_id":"2436","origin":{"stop_id":"WALMART:2"},"destination":{"stop_id":"LSE:1"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:38:00-06:00","expected":"2026-01-19T12:39:34-06:00","expected_mins":5,"location":{"lat":40.115433,"lon":-88.242117}},{"stop_id":"IU:9","headsign":"13S
+        Silver","route":{"route_color":"cccccc","route_id":"SILVER","route_long_name":"Silver","route_short_name":"13","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.28932250@][2][1654525442681]\/8__SV3_UIMF","trip_headsign":"PAR","route_id":"SILVER","block_id":"SV3
+        UIMF","direction":"South","service_id":"SV3 UIMF","shape_id":"SILVER 120"},"vehicle_id":"1612","origin":{"stop_id":"LSE:8"},"destination":{"stop_id":"PAR:2"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:38:00-06:00","expected":"2026-01-19T12:40:31-06:00","expected_mins":6,"location":{"lat":40.112133,"lon":-88.20895}},{"stop_id":"IU:2","headsign":"12W
+        Teal","route":{"route_color":"006991","route_id":"TEAL","route_long_name":"Teal","route_short_name":"12","route_text_color":"ffffff"},"trip":{"trip_id":"[@14.0.51708725@][4][1275506079140]\/11__T3_UIMF","trip_headsign":"Illinois
+        Terminal","route_id":"TEAL","block_id":"T3 UIMF","direction":"West","service_id":"T3
+        UIMF","shape_id":"TEAL 23"},"vehicle_id":"2432","origin":{"stop_id":"PAR:2"},"destination":{"stop_id":"IT:5"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:38:00-06:00","expected":"2026-01-19T12:40:37-06:00","expected_mins":6,"location":{"lat":40.099483,"lon":-88.220883}},{"stop_id":"IU:2","headsign":"2C
+        Red","route":{"route_color":"ed1c24","route_id":"RED","route_long_name":"Red","route_short_name":"2","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.66477024@][41][1748983757675]\/36__R3_MF","trip_headsign":"Meijer
+        - IT - Walmart","route_id":"RED","block_id":"R3 MF","direction":"Champaign","service_id":"R3
+        MF","shape_id":"[@6.0.66477024@]36"},"vehicle_id":"1732","origin":{"stop_id":"LSE:1"},"destination":{"stop_id":"WALMART:2"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:43:00-06:00","expected":"2026-01-19T12:41:04-06:00","expected_mins":7,"location":{"lat":40.100567,"lon":-88.2096}},{"stop_id":"IU:1","headsign":"22N
+        Illini","route":{"route_color":"5a1d5a","route_id":"ILLINI","route_long_name":"Illini","route_short_name":"22","route_text_color":"ffffff"},"trip":{"trip_id":"[@7.0.41200832@][1][1238430123625]\/33__I3_UIMF","trip_headsign":"Lincoln
+        & Killarney","route_id":"ILLINI","block_id":"I3 UIMF","direction":"North","service_id":"I3
+        UIMF","shape_id":"22N ILLINI 10"},"vehicle_id":"2261","origin":{"stop_id":"PAR:2"},"destination":{"stop_id":"LNCLNKLRNY:1"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:40:00-06:00","expected":"2026-01-19T12:41:32-06:00","expected_mins":7,"location":{"lat":40.1026,"lon":-88.238567}},{"stop_id":"IU:2","headsign":"5W
+        Green","route":{"route_color":"008063","route_id":"GREEN","route_long_name":"Green","route_short_name":"5","route_text_color":"ffffff"},"trip":{"trip_id":"2GN539__GN2_MF","trip_headsign":"Round
+        Barn Road - Holiday Park","route_id":"GREEN","block_id":"GN2 MF","direction":"West","service_id":"GN2
+        MF","shape_id":"5W-PM"},"vehicle_id":"2414","origin":{"stop_id":"MNBRDY:2"},"destination":{"stop_id":"WSFLDLWNDL:4"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:44:00-06:00","expected":"2026-01-19T12:42:03-06:00","expected_mins":8,"location":{"lat":40.111683,"lon":-88.207683}},{"stop_id":"IU:1","headsign":"12E
+        Teal Orchard Downs","route":{"route_color":"006991","route_id":"TEAL","route_long_name":"Teal","route_short_name":"12","route_text_color":"ffffff"},"trip":{"trip_id":"[@7.0.41893871@][3][1243541396687]\/86__T2_UIMF","trip_headsign":"Orchard
+        Downs","route_id":"TEAL","block_id":"T2 UIMF","direction":"East","service_id":"T2
+        UIMF","shape_id":"12E TEAL 13"},"vehicle_id":"2104","origin":{"stop_id":"IT:5"},"destination":{"stop_id":"ODSS:1"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:42:00-06:00","expected":"2026-01-19T12:42:08-06:00","expected_mins":8,"location":{"lat":40.116017,"lon":-88.24025}}]}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Length:
+      - '6861'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 19 Jan 2026 18:34:23 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Host:
+      - developer.cumtd.com
+      User-Agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://developer.cumtd.com/api/v2.2/json/getdeparturesbystop?count=10&stop_id=IU
+  response:
+    body:
+      string: '{"time":"2026-01-19T12:36:12-06:00","new_changeset":true,"status":{"code":200,"msg":"ok"},"rqst":{"method":"GetDeparturesByStop","params":{"count":10,"route_id":"","stop_id":"IU"}},"departures":[{"stop_id":"IU:9","headsign":"24S
+        Link","route":{"route_color":"00ffff","route_id":"LINK","route_long_name":"Link","route_short_name":"24","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.15252684@][2][1622672028480]\/70__LN3_MF","trip_headsign":"Water
+        Survey","route_id":"LINK","block_id":"LN3 MF","direction":"South","service_id":"LN3
+        MF","shape_id":"[@6.0.15252684@]2"},"vehicle_id":"2305","origin":{"stop_id":"UNIWRT:2"},"destination":{"stop_id":"ISWS:2"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:40:00-06:00","expected":"2026-01-19T12:38:18-06:00","expected_mins":2,"location":{"lat":40.111017,"lon":-88.219383}},{"stop_id":"IU:9","headsign":"22S
+        Illini","route":{"route_color":"5a1d5a","route_id":"ILLINI","route_long_name":"Illini","route_short_name":"22","route_text_color":"ffffff"},"trip":{"trip_id":"[@7.0.41200832@][2][1238430887312]\/167__I4_UIMF","trip_headsign":"PAR","route_id":"ILLINI","block_id":"I4
+        UIMF","direction":"South","service_id":"I4 UIMF","shape_id":"[@15.0.68513188@]4"},"vehicle_id":"2105","origin":{"stop_id":"LNCLNKLRNY:2"},"destination":{"stop_id":"PAR:2"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:39:00-06:00","expected":"2026-01-19T12:38:29-06:00","expected_mins":2,"location":{"lat":40.1137,"lon":-88.224033}},{"stop_id":"IU:9","headsign":"13S
+        Silver","route":{"route_color":"cccccc","route_id":"SILVER","route_long_name":"Silver","route_short_name":"13","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.28932250@][2][1654525442681]\/8__SV3_UIMF","trip_headsign":"PAR","route_id":"SILVER","block_id":"SV3
+        UIMF","direction":"South","service_id":"SV3 UIMF","shape_id":"SILVER 120"},"vehicle_id":"1612","origin":{"stop_id":"LSE:8"},"destination":{"stop_id":"PAR:2"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:38:00-06:00","expected":"2026-01-19T12:39:54-06:00","expected_mins":4,"location":{"lat":40.112817,"lon":-88.218217}},{"stop_id":"IU:2","headsign":"12W
+        Teal","route":{"route_color":"006991","route_id":"TEAL","route_long_name":"Teal","route_short_name":"12","route_text_color":"ffffff"},"trip":{"trip_id":"[@14.0.51708725@][4][1275506079140]\/11__T3_UIMF","trip_headsign":"Illinois
+        Terminal","route_id":"TEAL","block_id":"T3 UIMF","direction":"West","service_id":"T3
+        UIMF","shape_id":"TEAL 23"},"vehicle_id":"2432","origin":{"stop_id":"PAR:2"},"destination":{"stop_id":"IT:5"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:38:00-06:00","expected":"2026-01-19T12:40:09-06:00","expected_mins":4,"location":{"lat":40.10215,"lon":-88.2218}},{"stop_id":"IU:1","headsign":"22N
+        Illini","route":{"route_color":"5a1d5a","route_id":"ILLINI","route_long_name":"Illini","route_short_name":"22","route_text_color":"ffffff"},"trip":{"trip_id":"[@7.0.41200832@][1][1238430123625]\/33__I3_UIMF","trip_headsign":"Lincoln
+        & Killarney","route_id":"ILLINI","block_id":"I3 UIMF","direction":"North","service_id":"I3
+        UIMF","shape_id":"22N ILLINI 10"},"vehicle_id":"2261","origin":{"stop_id":"PAR:2"},"destination":{"stop_id":"LNCLNKLRNY:1"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:40:00-06:00","expected":"2026-01-19T12:41:32-06:00","expected_mins":5,"location":{"lat":40.107783,"lon":-88.238683}},{"stop_id":"IU:1","headsign":"2U
+        Red","route":{"route_color":"ed1c24","route_id":"RED","route_long_name":"Red","route_short_name":"2","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.66477024@][42][1748981149016]\/13__R1_MF","trip_headsign":"IT
+        - Urbana Meijer - Lincoln Square","route_id":"RED","block_id":"R1 MF","direction":"Urbana","service_id":"R1
+        MF","shape_id":"[@6.0.66477024@]38"},"vehicle_id":"2436","origin":{"stop_id":"WALMART:2"},"destination":{"stop_id":"LSE:1"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:38:00-06:00","expected":"2026-01-19T12:41:49-06:00","expected_mins":6,"location":{"lat":40.114383,"lon":-88.237867}},{"stop_id":"IU:1","headsign":"12E
+        Teal Orchard Downs","route":{"route_color":"006991","route_id":"TEAL","route_long_name":"Teal","route_short_name":"12","route_text_color":"ffffff"},"trip":{"trip_id":"[@7.0.41893871@][3][1243541396687]\/86__T2_UIMF","trip_headsign":"Orchard
+        Downs","route_id":"TEAL","block_id":"T2 UIMF","direction":"East","service_id":"T2
+        UIMF","shape_id":"12E TEAL 13"},"vehicle_id":"2104","origin":{"stop_id":"IT:5"},"destination":{"stop_id":"ODSS:1"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:42:00-06:00","expected":"2026-01-19T12:42:00-06:00","expected_mins":6,"location":{"lat":40.11535,"lon":-88.24155}},{"stop_id":"IU:2","headsign":"2C
+        Red","route":{"route_color":"ed1c24","route_id":"RED","route_long_name":"Red","route_short_name":"2","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.66477024@][41][1748983757675]\/36__R3_MF","trip_headsign":"Meijer
+        - IT - Walmart","route_id":"RED","block_id":"R3 MF","direction":"Champaign","service_id":"R3
+        MF","shape_id":"[@6.0.66477024@]36"},"vehicle_id":"1732","origin":{"stop_id":"LSE:1"},"destination":{"stop_id":"WALMART:2"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:43:00-06:00","expected":"2026-01-19T12:42:09-06:00","expected_mins":6,"location":{"lat":40.10075,"lon":-88.211817}},{"stop_id":"IU:1","headsign":"13N
+        Silver","route":{"route_color":"cccccc","route_id":"SILVER","route_long_name":"Silver","route_short_name":"13","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.28932250@][1][1654214032262]\/76__SV1_UIMTH","trip_headsign":"Lincoln
+        Square","route_id":"SILVER","block_id":"SV1 UIMTH","direction":"North","service_id":"SV1
+        UIMTH","shape_id":"[@6.0.28932250@]1"},"vehicle_id":"1604","origin":{"stop_id":"PAR:2"},"destination":{"stop_id":"LSE:8"},"is_monitored":false,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:43:00-06:00","expected":"2026-01-19T12:43:00-06:00","expected_mins":7,"location":{"lat":40.099317,"lon":-88.219867}},{"stop_id":"IU:2","headsign":"5W
+        Green","route":{"route_color":"008063","route_id":"GREEN","route_long_name":"Green","route_short_name":"5","route_text_color":"ffffff"},"trip":{"trip_id":"2GN539__GN2_MF","trip_headsign":"Round
+        Barn Road - Holiday Park","route_id":"GREEN","block_id":"GN2 MF","direction":"West","service_id":"GN2
+        MF","shape_id":"5W-PM"},"vehicle_id":"2414","origin":{"stop_id":"MNBRDY:2"},"destination":{"stop_id":"WSFLDLWNDL:4"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:44:00-06:00","expected":"2026-01-19T12:43:05-06:00","expected_mins":7,"location":{"lat":40.111667,"lon":-88.207983}}]}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Length:
+      - '6878'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 19 Jan 2026 18:36:12 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: ''
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Host:
+      - developer.cumtd.com
+      User-Agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: https://developer.cumtd.com/api/v2.2/json/getdeparturesbystop?count=10&stop_id=IU
+  response:
+    body:
+      string: '{"time":"2026-01-19T12:37:31-06:00","new_changeset":true,"status":{"code":200,"msg":"ok"},"rqst":{"method":"GetDeparturesByStop","params":{"count":10,"route_id":"","stop_id":"IU"}},"departures":[{"stop_id":"IU:9","headsign":"24S
+        Link","route":{"route_color":"00ffff","route_id":"LINK","route_long_name":"Link","route_short_name":"24","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.15252684@][2][1622672028480]\/70__LN3_MF","trip_headsign":"Water
+        Survey","route_id":"LINK","block_id":"LN3 MF","direction":"South","service_id":"LN3
+        MF","shape_id":"[@6.0.15252684@]2"},"vehicle_id":"2305","origin":{"stop_id":"UNIWRT:2"},"destination":{"stop_id":"ISWS:2"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:40:00-06:00","expected":"2026-01-19T12:37:33-06:00","expected_mins":0,"location":{"lat":40.11055,"lon":-88.222733}},{"stop_id":"IU:9","headsign":"22S
+        Illini","route":{"route_color":"5a1d5a","route_id":"ILLINI","route_long_name":"Illini","route_short_name":"22","route_text_color":"ffffff"},"trip":{"trip_id":"[@7.0.41200832@][2][1238430887312]\/167__I4_UIMF","trip_headsign":"PAR","route_id":"ILLINI","block_id":"I4
+        UIMF","direction":"South","service_id":"I4 UIMF","shape_id":"[@15.0.68513188@]4"},"vehicle_id":"2105","origin":{"stop_id":"LNCLNKLRNY:2"},"destination":{"stop_id":"PAR:2"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:39:00-06:00","expected":"2026-01-19T12:38:58-06:00","expected_mins":1,"location":{"lat":40.1116,"lon":-88.224017}},{"stop_id":"IU:2","headsign":"12W
+        Teal","route":{"route_color":"006991","route_id":"TEAL","route_long_name":"Teal","route_short_name":"12","route_text_color":"ffffff"},"trip":{"trip_id":"[@14.0.51708725@][4][1275506079140]\/11__T3_UIMF","trip_headsign":"Illinois
+        Terminal","route_id":"TEAL","block_id":"T3 UIMF","direction":"West","service_id":"T3
+        UIMF","shape_id":"TEAL 23"},"vehicle_id":"2432","origin":{"stop_id":"PAR:2"},"destination":{"stop_id":"IT:5"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:38:00-06:00","expected":"2026-01-19T12:39:24-06:00","expected_mins":2,"location":{"lat":40.104217,"lon":-88.22355}},{"stop_id":"IU:1","headsign":"2U
+        Red","route":{"route_color":"ed1c24","route_id":"RED","route_long_name":"Red","route_short_name":"2","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.66477024@][42][1748981149016]\/13__R1_MF","trip_headsign":"IT
+        - Urbana Meijer - Lincoln Square","route_id":"RED","block_id":"R1 MF","direction":"Urbana","service_id":"R1
+        MF","shape_id":"[@6.0.66477024@]38"},"vehicle_id":"2436","origin":{"stop_id":"WALMART:2"},"destination":{"stop_id":"LSE:1"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:38:00-06:00","expected":"2026-01-19T12:40:18-06:00","expected_mins":3,"location":{"lat":40.1144,"lon":-88.233683}},{"stop_id":"IU:9","headsign":"13S
+        Silver","route":{"route_color":"cccccc","route_id":"SILVER","route_long_name":"Silver","route_short_name":"13","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.28932250@][2][1654525442681]\/8__SV3_UIMF","trip_headsign":"PAR","route_id":"SILVER","block_id":"SV3
+        UIMF","direction":"South","service_id":"SV3 UIMF","shape_id":"SILVER 120"},"vehicle_id":"1612","origin":{"stop_id":"LSE:8"},"destination":{"stop_id":"PAR:2"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:38:00-06:00","expected":"2026-01-19T12:40:24-06:00","expected_mins":3,"location":{"lat":40.11285,"lon":-88.218767}},{"stop_id":"IU:1","headsign":"22N
+        Illini","route":{"route_color":"5a1d5a","route_id":"ILLINI","route_long_name":"Illini","route_short_name":"22","route_text_color":"ffffff"},"trip":{"trip_id":"[@7.0.41200832@][1][1238430123625]\/33__I3_UIMF","trip_headsign":"Lincoln
+        & Killarney","route_id":"ILLINI","block_id":"I3 UIMF","direction":"North","service_id":"I3
+        UIMF","shape_id":"22N ILLINI 10"},"vehicle_id":"2261","origin":{"stop_id":"PAR:2"},"destination":{"stop_id":"LNCLNKLRNY:1"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:40:00-06:00","expected":"2026-01-19T12:41:32-06:00","expected_mins":4,"location":{"lat":40.1079,"lon":-88.23815}},{"stop_id":"IU:2","headsign":"2C
+        Red","route":{"route_color":"ed1c24","route_id":"RED","route_long_name":"Red","route_short_name":"2","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.66477024@][41][1748983757675]\/36__R3_MF","trip_headsign":"Meijer
+        - IT - Walmart","route_id":"RED","block_id":"R3 MF","direction":"Champaign","service_id":"R3
+        MF","shape_id":"[@6.0.66477024@]36"},"vehicle_id":"1732","origin":{"stop_id":"LSE:1"},"destination":{"stop_id":"WALMART:2"},"is_monitored":true,"is_scheduled":true,"is_istop":false,"scheduled":"2026-01-19T12:43:00-06:00","expected":"2026-01-19T12:42:09-06:00","expected_mins":5,"location":{"lat":40.10075,"lon":-88.211817}},{"stop_id":"IU:1","headsign":"13N
+        Silver","route":{"route_color":"cccccc","route_id":"SILVER","route_long_name":"Silver","route_short_name":"13","route_text_color":"000000"},"trip":{"trip_id":"[@6.0.28932250@][1][1654214032262]\/76__SV1_UIMTH","trip_headsign":"Lincoln
+        Square","route_id":"SILVER","block_id":"SV1 UIMTH","direction":"North","service_id":"SV1
+        UIMTH","shape_id":"[@6.0.28932250@]1"},"vehicle_id":"1604","origin":{"stop_id":"PAR:2"},"destination":{"stop_id":"LSE:8"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:43:00-06:00","expected":"2026-01-19T12:43:00-06:00","expected_mins":5,"location":{"lat":40.0995,"lon":-88.220667}},{"stop_id":"IU:1","headsign":"12E
+        Teal Orchard Downs","route":{"route_color":"006991","route_id":"TEAL","route_long_name":"Teal","route_short_name":"12","route_text_color":"ffffff"},"trip":{"trip_id":"[@7.0.41893871@][3][1243541396687]\/86__T2_UIMF","trip_headsign":"Orchard
+        Downs","route_id":"TEAL","block_id":"T2 UIMF","direction":"East","service_id":"T2
+        UIMF","shape_id":"12E TEAL 13"},"vehicle_id":"2104","origin":{"stop_id":"IT:5"},"destination":{"stop_id":"ODSS:1"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:42:00-06:00","expected":"2026-01-19T12:43:12-06:00","expected_mins":6,"location":{"lat":40.11535,"lon":-88.24155}},{"stop_id":"IU:2","headsign":"5W
+        Green","route":{"route_color":"008063","route_id":"GREEN","route_long_name":"Green","route_short_name":"5","route_text_color":"ffffff"},"trip":{"trip_id":"2GN539__GN2_MF","trip_headsign":"Round
+        Barn Road - Holiday Park","route_id":"GREEN","block_id":"GN2 MF","direction":"West","service_id":"GN2
+        MF","shape_id":"5W-PM"},"vehicle_id":"2414","origin":{"stop_id":"MNBRDY:2"},"destination":{"stop_id":"WSFLDLWNDL:4"},"is_monitored":true,"is_scheduled":true,"is_istop":true,"scheduled":"2026-01-19T12:44:00-06:00","expected":"2026-01-19T12:44:20-06:00","expected_mins":7,"location":{"lat":40.111667,"lon":-88.207983}}]}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Content-Length:
+      - '6870'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 19 Jan 2026 18:37:30 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+version: 1

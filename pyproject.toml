@@ -1,0 +1,89 @@
+[project]
+dependencies = [
+  "httpx",
+  "pydantic",
+]
+description = "Home Assistant integration for CUMTD bus arrival alerts"
+name = "ha-cumtd"
+readme = "README.md"
+requires-python = ">=3.12"
+version = "0.1.0"
+
+[dependency-groups]
+dev = [
+  "pytest",
+  "pytest-asyncio",
+  "pytest-cov",
+  "ruff",
+  "pyright",
+  "voluptuous",
+  "homeassistant",
+  "vcrpy",
+  "pre-commit",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+filterwarnings = [
+  "default", # Show all warnings
+  "ignore::DeprecationWarning", # Except deprecation warnings from dependencies
+  "error::DeprecationWarning:custom_components", # But DO fail on our own deprecation warnings
+]
+testpaths = ["tests"]
+
+[tool.pyright]
+exclude = ["**/__pycache__", "tests"]
+include = ["custom_components/cumtd_bus"]
+pythonVersion = "3.12"
+reportIncompatibleVariableOverride = false # HA uses @property, not @cached_property
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+ignore = []
+select = [
+  "E",
+  "F",
+  "W",
+  "I",
+  "N",
+  "UP",
+  "ANN",
+  "B",
+  "A",
+  "C4",
+  "ISC",
+  "ICN",
+  "PIE",
+  "T20",
+  "PYI",
+  "Q",
+  "RSE",
+  "RET",
+  "SIM",
+  "TID",
+  "PTH",
+  "ERA",
+  "RUF",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = [
+  "ANN001",
+  "ANN201",
+  "DTZ",
+  "SLF001",
+  "PLR2004",
+  "ARG001",
+]
+
+[tool.refurb]
+ignore = [
+  "FURB138", # List comprehensions (prefer explicit loops)
+]
+
+[tool.coverage.run]
+omit = ["tests/*", "**/__pycache__/*"]
+source = ["custom_components/cumtd_bus"]
