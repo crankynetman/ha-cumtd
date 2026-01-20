@@ -4,10 +4,9 @@ import logging
 from typing import Any
 
 import voluptuous as vol
+from homeassistant import config_entries
 from homeassistant.config_entries import ConfigFlowResult
 from homeassistant.core import callback
-
-from homeassistant import config_entries
 
 from .api import AuthenticationError, CUMTDAPIError, CUMTDClient
 from .const import (
