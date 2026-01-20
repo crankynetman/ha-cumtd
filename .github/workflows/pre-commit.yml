@@ -1,0 +1,58 @@
+name: Run pre-commit (CI)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Cache pip and pre-commit
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/pip/wheels
+            ~/.cache/pre-commit
+          key: ${{ runner.os }}-pip-python-3.12-${{ hashFiles('**/uv.lock','**/pyproject.toml','**/.pre-commit-config.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install tooling
+        run: |
+          python -m pip install --upgrade pip
+          pip install --upgrade pre-commit uv pyright pytest pytest-asyncio pytest-cov vcrpy httpx ruff refurb
+
+      - name: Show versions
+        run: |
+          python --version
+          pip --version
+          pre-commit --version || true
+          uv --version || true
+          pyright --version || true
+          ruff --version || true
+
+      - name: Run pre-commit hooks
+        uses: pre-commit/action@v3.0.1
+        with:
+          extra_args: --all-files
+
+      - name: Fail if pre-commit modified files
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::pre-commit modified files (run 'pre-commit run --all-files' locally).";
+            git --no-pager diff --name-only || true;
+            exit 1;
+          fi
