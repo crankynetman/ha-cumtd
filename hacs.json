@@ -1,7 +1,5 @@
 {
     "name": "CUMTD Bus Alerts",
     "render_readme": true,
-    "homeassistant": "2026.1.0",
-    "domains": ["sensor"],
-    "iot_class": "cloud_polling"
+    "homeassistant": "2026.1.0"
 }

@@ -3,6 +3,7 @@
 from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
+from homeassistant import config_entries
 
 from custom_components.cumtd_bus.api import AuthenticationError, CUMTDAPIError
 from custom_components.cumtd_bus.config_flow import (
@@ -18,7 +19,6 @@ from custom_components.cumtd_bus.const import (
     CONF_STOP_NAME,
     CONF_STOPS,
 )
-from homeassistant import config_entries
 
 
 @pytest.fixture
