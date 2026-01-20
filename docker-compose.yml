@@ -1,6 +1,6 @@
 services:
   homeassistant:
-    image: homeassistant/home-assistant:latest
+    image: homeassistant/home-assistant:2026.1.0
     container_name: ha-cumtd-dev
     restart: unless-stopped
     ports:
