@@ -2,7 +2,9 @@
 
 Never miss your CUMTD bus again! This integration tracks CUMTD bus arrivals and sends audio announcements to your speakers when it's time for you to leave.
 
-[![HACS Badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://github.com/hacs/integration)
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=crankynetman&repository=ha-cumtd&category=Public+Transit)
 
 ## What This Does
 
@@ -69,13 +71,24 @@ Tells you when to head out the door. You set your walk time and a buffer, it doe
 
 ## Installation
 
-### HACS (Recommended)
+### HACS Magic Link (Recommended)
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=crankynetman&repository=ha-cumtd&category=Public+Transit)
+
+1. Click the link above ^
+2. Click Download
+3. Restart Home Assistant
+4. Add via Settings → Devices & Services → Add Integration → "CUMTD Bus"
+
+### HACS Manual Repo Addition
 
 1. Open HACS in your Home Assistant instance
-2. Search for "CUMTD Bus"
-3. Click **Download**
-4. Restart Home Assistant
-5. Add via Settings → Devices & Services → Add Integration → "CUMTD Bus"
+2. Click the three dots menu (⋮) in the top right corner
+3. Select **Custom repositories**
+4. Add `https://github.com/crankynetman/ha-cumtd` with category **Integration**
+5. Search for "CUMTD Bus" and click **Download**
+6. Restart Home Assistant
+7. Add via Settings → Devices & Services → Add Integration → "CUMTD Bus"
 
 ### Manual Install
 
