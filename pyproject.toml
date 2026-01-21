@@ -1,6 +1,6 @@
 [project]
 dependencies = [
-  "httpx~=0.27",
+  "httpx~=0.28",
   "pydantic~=2.12",
   "homeassistant>=2026.1.0",
 ]
