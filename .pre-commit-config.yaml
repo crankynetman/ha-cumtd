@@ -20,10 +20,17 @@ repos:
         args: [--fix, --exit-non-zero-on-fix]
       - id: ruff-format
 
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.9.26
+    hooks:
+      - id: uv-lock
+
   - repo: https://github.com/dosisod/refurb
     rev: v2.2.0
     hooks:
       - id: refurb
+
   - repo: local
     hooks:
       - id: pyright
