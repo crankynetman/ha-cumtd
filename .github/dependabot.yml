@@ -18,12 +18,9 @@ updates:
       interval: "weekly"
       day: "sunday"
       time: "04:00"
-<<<<<<< ci/enable-brands
-=======
     versioning-strategy: "increase-if-necessary"
     allow:
       - dependency-type: "direct"
->>>>>>> main
     open-pull-requests-limit: 5
     labels:
       - dependencies
