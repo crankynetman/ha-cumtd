@@ -3,7 +3,7 @@
         "step": {
             "user": {
                 "title": "CUMTD Bus",
-                "description": "Enter your CUMTD API key. You can add stops after setup.\n\nGet an API key at: https://developer.cumtd.com",
+                "description": "Enter your CUMTD API key. You can add stops after setup.\n\nGet an API key at: {api_url}",
                 "data": {
                     "api_key": "API Key"
                 }

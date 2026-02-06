@@ -66,7 +66,7 @@ class CUMTDBusConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             data_schema=vol.Schema({vol.Required(CONF_API_KEY): str}),
             errors=errors,
             description_placeholders={
-                "info": "Enter your CUMTD API key. You can add stops after setup."
+                "api_url": "https://developer.cumtd.com",
             },
         )
 
